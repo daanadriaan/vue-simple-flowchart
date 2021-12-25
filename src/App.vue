@@ -40,6 +40,7 @@ export default {
             y: -69,
             type: 'Action',
             label: 'test1',
+            class: 'blue',
           },
           {
             id: 4,
@@ -47,6 +48,7 @@ export default {
             y: 80,
             type: 'Script',
             label: 'test2',
+            class: 'red',
           },
           {
             id: 6,
@@ -54,6 +56,7 @@ export default {
             y: 80,
             type: 'Rule',
             label: 'test3',
+            class: 'green',
           }
         ],
         links: [
@@ -109,6 +112,8 @@ export default {
 </script>
 
 <style lang="scss">
+$blue: #5454ff;
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -120,6 +125,13 @@ export default {
   height: 800px;
   .tool-wrapper {
     position: relative;
+  }
+}
+
+.flowchart-node.blue{
+  box-shadow: 0 0 0 2px $blue !important;
+  .node-type{
+    background: $blue !important;
   }
 }
 </style>
